@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { request } from '../request';
 
+
 const useFetch = (url) => {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -13,7 +14,7 @@ const useFetch = (url) => {
         const res = await request.get(url);
         setData(res.data.data);
       } catch (error) {
-        setError(error);
+        setError(error); 
       }
       setIsLoading(false);
     };
